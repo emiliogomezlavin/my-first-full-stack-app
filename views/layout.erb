@@ -3,8 +3,14 @@
 <head>
   <title>Travelution</title>
   
+  <!-- Adds link to CSS files -->
   <link rel="stylesheet" type="text/css" href="/css/reset.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+  
+  <!-- Adds link to Bootstrap libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
 </head>
 <body>
   <!-- <header>
@@ -17,8 +23,42 @@
       </ul>
     </nav>
   </header> -->
+
+  <!--  Example of current nav bar -->
+  <!-- <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">  
+      <div class="nav navbar-nav">
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/destinations">Destinations</a></li>
+          <li><a href="/log_in">Log In</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">        
+        <a class="navbar-brand" href="/">Travelution</a>
+        <!-- <h5 style="color: white">The evolution of traveling</h5> -->
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/about">About</a></li>
+        <li><a href="/destinations">Destinations</a></li>
+        <li><a href="/log_in">LogIn</a></li>
+      </ul>
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+  <img src="http://i.imgur.com/b1p86CP.jpg" id="background-photo">
   <main>
-    <%= yield %>
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
   </main>
   <!-- <footer>
     &copy; Tun.r

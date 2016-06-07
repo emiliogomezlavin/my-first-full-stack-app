@@ -10,7 +10,7 @@ class Travelution < Sinatra::Base
   # new
   get '/destinations/new' do
     # @artist = Artist.new
-    # erb(:"artists/new")
+    erb(:"destinations/new")
   end
 
   # create

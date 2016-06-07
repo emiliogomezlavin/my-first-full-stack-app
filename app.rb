@@ -9,4 +9,8 @@ class Travelution < Sinatra::Base
     erb :about
   end
 
+  get '/log_in' do
+  	erb :log_in
+  end
+
 end
