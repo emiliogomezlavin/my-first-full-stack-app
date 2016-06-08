@@ -1,41 +1,59 @@
 <div class="row">
   <h2 class="text-center">New Destination</h2>
 </div>
-<form class="form-horizontal" action="/destinations" method="post">
-  <div class="form-group">
-    <label for="destination[name]" class="col-xs-3 control-label">Name:</label>
-    <div class="col-xs-7">  
-      <input type="text" name="destination[name]" class="form-control" placeholder="Mexico City">
-    </div>
-    <div class="col-xs-2"></div>
+<div class="row">
+  <div class="col-xs-5">
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <div id="mapNewDest"></div>
   </div>
-  <div class="form-group">
-    <label for="destination[country]" class="col-xs-3 control-label">Country:</label>
-    <div class="col-xs-7">  
-      <input type="text" name="destination[country]" class="form-control" placeholder="Mexico">
-    </div>
-    <div class="col-xs-2"></div>
+  <div class="col-xs-7">
+    <form class="form-horizontal" action="/destinations" method="post">
+      <div class="form-group">
+        <label for="destination[name]" class="col-xs-2 control-label">Name:</label>
+        <div class="col-xs-9">  
+          <input id="destName" type="text" name="destination[name]" class="form-control" placeholder="Mexico City">
+        </div>
+        <div class="col-xs-1"></div>
+      </div>
+      <div class="form-group">
+        <label for="destination[country]" class="col-xs-2 control-label">Country:</label>
+        <div class="col-xs-9">  
+          <input id="destCountry" type="text" name="destination[country]" class="form-control" placeholder="Mexico">
+        </div>
+        <div class="col-xs-1"></div>
+      </div>
+      <div class="form-group">
+        <label for="destination[photo_url]" class="col-xs-2 control-label">Photo URL:</label>
+        <div class="col-xs-9">  
+          <input type="text" name="destination[photo_url]" class="form-control" placeholder="https://">
+        </div>
+        <div class="col-xs-1"></div>
+      </div>
+      <div class="form-group">
+        <label for="destination[interesting_fact]" class="col-xs-2 control-label">Interesting Fact/Activity</label>
+        <div class="col-xs-9">  
+          <input id="destAddress" type="text" name="destination[interesting_fact]" class="form-control" placeholder="Best city in the world">
+        </div>
+        <div class="col-xs-1"></div>
+      </div>
+      <!-- <input class="btn btn-danger" type="submit" value="Create"> -->
+      <div class="row">
+        <div class="col-xs-3 col-xs-offset-5">
+          <button type="submit" class="btn btn-default" aria-label="Left Align" style="background-color: #ecf0f1">Take me there... <span class="glyphicon glyphicon-plane" aria-hidden="true"></span> 
+          </button>      
+        </div>
+        <div class="col-xs-4"></div>
+      </div>
+    </form>
   </div>
-  <div class="form-group">
-    <label for="destination[photo_url]" class="col-xs-3 control-label">Photo URL:</label>
-    <div class="col-xs-7">  
-      <input type="text" name="destination[photo_url]" class="form-control" placeholder="https://">
-    </div>
-    <div class="col-xs-2"></div>
-  </div>
-  <div class="form-group">
-    <label for="destination[interesting_fact]" class="col-xs-3 control-label">Interesting Fact/Activity</label>
-    <div class="col-xs-7">  
-      <input type="text" name="destination[interesting_fact]" class="form-control" placeholder="Best city in the world">
-    </div>
-    <div class="col-xs-2"></div>
-  </div>
-  <!-- <input class="btn btn-danger" type="submit" value="Create"> -->
-  <div class="row">
-    <div class="col-xs-3 col-xs-offset-5">
-      <button type="submit" class="btn btn-default" aria-label="Left Align" style="background-color: #ecf0f1">Take me there... <span class="glyphicon glyphicon-plane" aria-hidden="true"></span> 
-      </button>      
-    </div>
-    <div class="col-xs-4"></div>
-  </div>
-</form>
+</div>
+
+
+<script>
+  initAutocomplete();
+</script>
+
+
+
+
+
