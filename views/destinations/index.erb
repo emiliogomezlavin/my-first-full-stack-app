@@ -1,32 +1,48 @@
-<!-- <h2>Destinations</h2>
-
-<a class="btn" href="/artists/new">Add Destination</a>
-
-<div class="artists">
+<div class="row">
+  <div class="col-xs-10 text-center">
+    <h1>Destinations</h1>
+  </div>
+  <div class="col-xs-1">
+    <a class="btn" href="/destinations/new">Add Destination</a>
+  </div>
+</div>
+<div class="destinations">
   <% @destinations.each do |destination| %>
   <div class="row">
-    <img src="<%= artist.photo_url %>" alt="<%= artist.name %> photo">
-    <ul>
-      <li>
-        <h2>
-          <a href="/destinations/<%= destination.id %>">
-            <%= destination.name %>
-          </a>
-        </h2>
-      </li>
-      <li>
-        <a href="/destinations/<%= destination.id %>/edit">
-          Edit
-        </a>
-      </li>
-      <li>
+    <div class="col-xs-2 col-xs-offset-3"> 
+      <a href="/destinations/<%= destination.id %>">
+        <img id="destImg" src="<%= destination.photo_url %>" alt="<%= destination.name %> photo" height="200" width="300">
+      </a>
+    </div>
+    <div class="col-xs-4 col-xs-offset-2">
+      <ul>
         <li>
-          <form method="/destinations/<%= destination.id %>/delete" action="post">
-            <button>Delete</button>
-          </form>
+          <h2>
+            <a href="/destinations/<%= destination.id %>">
+              <%= destination.name %>
+            </a>
+          </h2>
         </li>
-      </li>
-    </ul>
+        <div class="row">
+          <div class="col-xs-2">  
+            <li>
+              <a class="btn btn-primary" href="/destinations/<%= destination.id %>/edit">
+                Edit <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="padding-left: 6px"></span> 
+              </a>
+            </li>
+          </div>
+          <div class="col-xs-2 col-xs-offset-1">    
+            <li>
+              <li>
+                <form method="post" action="/destinations/<%= destination.id %>/delete">
+                  <button class="btn btn-danger">Delete  <span class="glyphicon glyphicon-trash" aria-hidden="true" style="padding-left: 6px"></span> </button>
+                </form>
+              </li>
+            </li>
+          </div>
+        </div>  
+      </ul>
+    </div>  
   </div>
   <% end %>
-</div> -->
+</div> 

@@ -1,58 +1,58 @@
 class Travelution < Sinatra::Base
 
-  # RESTful Destination Controller Actions
+  
   # index
   get '/destinations' do
-    # @artists = Artist.all
-    # erb(:"artists/index")
+    @destinations = Destination.all
+    erb(:"destinations/index")
   end
 
   # new
   get '/destinations/new' do
-    # @artist = Artist.new
+    @destination = Destination.new
     erb(:"destinations/new")
   end
 
   # create
   post '/destinations' do
-    # @artist = Artist.new(params[:artist])
-    # if @artist.save
-    #   redirect("/artists/#{@artist.id}")
-    # else
-    #   erb(:"artists/new")
-    # end
+    @destination = Destination.new(params[:destination])
+    if @destination.save
+      redirect("/destinations/#{@destination.id}")
+    else
+      erb(:"destinations/new")
+    end
   end
 
   # show
   get '/destinations/:id' do
-    # @artist = Artist.find(params[:id])
-    # erb(:"artists/show")
+    @destination = Destination.find(params[:id])
+    erb(:"destinations/show")
   end
 
   # edit
   get '/destinations/:id/edit' do
-    # @artist = Artist.find(params[:id])
-    # erb(:"artists/edit")
+    @destination = Destination.find(params[:id])
+    erb(:"destinations/edit")
   end
 
   # update
-  put '/destinations/:id' do
-    # @artist = Artist.find(params[:id])
-    # if @artist.update_attributes(params[:artist])
-    #   redirect("/artists/#{artist.id}")
-    # else
-    #   erb(:"artists/edit")
-    # end
+  post '/destinations/:id' do
+    @destination = Destination.find(params[:id])
+    if @destination.update_attributes(params[:destination])
+      redirect("/destinations/#{@destination.id}")
+    else
+      erb(:"destinations/edit")
+    end
   end
 
   # delete
-  delete '/destinations/:id/delete' do
-    # @artist = Artist.find(params[:id])
-    # if @artist.destroy
-    #   redirect('/artists')
-    # else
-    #   redirect("/artists/#{@artist.id}")
-    # end
+  post '/destinations/:id/delete' do
+    @destination = Destination.find(params[:id])
+    if @destination.destroy
+      redirect('/destinations')
+    else
+      redirect("/destinations/#{@destination.id}")
+    end
   end
 
 end

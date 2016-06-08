@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-xs-4 col-xs-offset-2">  
+      <h2><%= @destination.name + ", " + @destination.country%></h2>
+  </div>
+  <div class="col-xs-4 col-xs-offset-2">  
+      <h2>Street View</h2>
+  </div>
+</div>
+
+
+<div class="row"> 
+  <div class="col-xs-6">
+    <img id="destImg" src="<%= @destination.photo_url %>" alt="<%= @destination.name %> photo" height="400" width="600">
+  </div>
+  <div class="col-xs-6">
+    <div id="street-view"></div>
+  </div>
+</div>  
+<div class="row">
+  <p><%= @destination.interesting_fact %></p>
+</div>
+

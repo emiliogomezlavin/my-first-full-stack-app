@@ -6,3 +6,28 @@
 #background-photo {
 	margin-top: -20px;
 }
+
+ul {
+	list-style-type: none;
+}
+
+#destImg {
+	margin: 15px;
+	border: 2px solid gray;
+	border-radius: 5px;
+}
+
+h1{
+	padding: 40px;
+}
+
+#map {
+    height: 400px;
+    width: 600px;
+}
+
+
+#street-view {
+    height: 400px;
+    width: 600px;
+}
