@@ -1,3 +1,7 @@
 development:
   adapter: postgresql
   database: travelution_development
+
+production:
+  adapter: postgresql
+  database: travelution_production
