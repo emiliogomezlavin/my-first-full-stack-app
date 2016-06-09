@@ -1,7 +1,8 @@
 require './models/destination'
+require 'geocoder'
 
 
-# Artist.all.destroy
+
 Destination.create({
 	name: "Istanbul", 
 	country: "Turkey",
