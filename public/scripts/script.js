@@ -2,43 +2,38 @@ console.log("linked!");
 
 
 var map;
-function initMap() {
+function initMap(lat, lng) {
   map = new google.maps.Map(document.getElementById('map'), {
-  zoom: 2,
-  center: {lat: -28, lng: 137}
+  zoom: 13,
+  center: {lat: lat, lng: lng}
   });
 }
 
+/////  Adds street view from requested   //////
 var panorama;
-function initialize() {
+function initialize(destination) {
   panorama = new google.maps.StreetViewPanorama(document.getElementById('street-view'), {
-    position: {lat: 37.869260, lng: -122.254811},
+    position: {lat: destination.latitude, lng: destination.longitude},
     pov: {heading: 165, pitch: 0},
     zoom: 1
   });
 }
 
-/////  Create the info from 
-
+/////  Adds map and SearchBox to find a new destination  //////
 var destName;
 var destCountry;
 var destAddress;
 
-
-
-
 function initAutocomplete() {
   var map = new google.maps.Map(document.getElementById('mapNewDest'), {
-    center: {lat: -33.8688, lng: 151.2195},
-    zoom: 13,
+    center: {lat: 37.790841, lng: -122.4034689},
+    zoom: 12,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
 
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
-  console.log(input);
   var searchBox = new google.maps.places.SearchBox(input);
-  console.log(searchBox);
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
   // Bias the SearchBox results towards current map's viewport.
@@ -51,13 +46,14 @@ function initAutocomplete() {
   // more details for that place.
   searchBox.addListener('places_changed', function() {
     var places = searchBox.getPlaces();
+    console.log(places) 
     destName = places[0].name;
     destCountry = places[0].address_components[places[0].address_components.length - 1].long_name;
-    destAddress = places[0].formatted_address;
+    destLocation = places[0].formatted_address;
 
     document.getElementById('destName').setAttribute("value", destName);
     document.getElementById('destCountry').setAttribute("value", destCountry);
-    document.getElementById('destAddress').setAttribute("value", destAddress);
+    document.getElementById('destLocation').setAttribute("value", destLocation);
 
     console.log(places[0].id);
     console.log(places[0].place_id);  

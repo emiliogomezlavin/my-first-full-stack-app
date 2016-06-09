@@ -17,10 +17,16 @@
   </div>
 </div>  
 <div class="row">
-  <p><%= @destination.interesting_fact %></p>
+  <ul>
+    <li><%= @destination.location %></li>
+    <li><%= @destination.latitude %></li>
+    <li><%= @destination.longitude %></li>
+    <li><%= @destination.interesting_fact %></li>
+  </ul>
 </div>
 
-<script>
-  initialize();
+<script type="text/javascript">
+  var data = <%= @destination.to_json %>
+  initialize(data);
 </script>
 
