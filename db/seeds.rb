@@ -2,7 +2,6 @@ require './models/destination'
 require 'geocoder'
 
 
-
 Destination.create({
 	name: "Istanbul", 
 	country: "Turkey",
@@ -31,8 +30,8 @@ Destination.create({
 	country: "San Francisco",
 	photo_url: "https://upload.wikimedia.org/wikipedia/commons/0/0a/Alcatraz_Island_photo_D_Ramey_Logan.jpg", 
 	interesting_fact: "Covas Workplace",
-	location: "Four Embarcadero Center, 4 Embarcadero Center, San Francisco, CA 94111, USA
-"
+# 	location: "Four Embarcadero Center, 4 Embarcadero Center, San Francisco, CA 94111, USA
+# "
 })
 
 Destination.create({
@@ -40,5 +39,5 @@ Destination.create({
 	country: "Mexico",
 	photo_url: "http://www.infrastructuremexico.com/wp-content/uploads/2015/11/zocalo21.jpg", 
 	interesting_fact: "Big square",
-	location: "Plaza de la Constitución S/N, Centro, Cuauhtémoc, 06010 Ciudad de México, D.F., Mexico"
+	# location: "Plaza de la Constitución S/N, Centro, Cuauhtémoc, 06010 Ciudad de México, D.F., Mexico"
 })
