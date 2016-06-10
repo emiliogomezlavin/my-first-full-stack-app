@@ -1,6 +1,10 @@
 <div class="row">
-  <h2 class="text-center">Edit Destination</h2>
+  <div class="col s12 center-align">
+    <h1>Edit Destination</h1>
+  </div>
 </div>
+<div class="divider" style="margin-bottom: 65px"></div>
+
 <form class="form-horizontal" action="/destinations/<%= @destination.id %>" method="post">
   <div class="form-group">
     <label for="destination[name]" class="col-xs-3 control-label">Name:</label>
@@ -32,11 +36,9 @@
   </div>
   <!-- <input class="btn btn-danger" type="submit" value="Create"> -->
   <div class="row">
-    <div class="col-xs-3 col-xs-offset-5">
-      <button type="submit" class="btn btn-default" aria-label="Left Align" style="background-color: #ecf0f1">All good now <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> 
-      </button>      
+    <div class="col s12 center-align">
+      <button class="btn waves-effect waves-light red darken-4 center-align" type="submit" name="action"><i class="material-icons right">thumb_up</i>All good now</button>
     </div>
-    <div class="col-xs-4"></div>
   </div>
 </form>
 

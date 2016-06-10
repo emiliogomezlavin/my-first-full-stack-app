@@ -1,5 +1,8 @@
 console.log("linked!!!!");
 
+$( document ).ready(function(){
+   $(".button-collapse").sideNav();
+})
 
 var map;
 function initMap(lat, lng) {

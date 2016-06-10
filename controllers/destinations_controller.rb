@@ -16,7 +16,7 @@ class Travelution < Sinatra::Base
   # create
   post '/destinations' do
     dest_params = params[:destination]
-    dest_params[:name] = dest_params[:name].split.map(&:capitalize).join(" ")
+    dest_params[:country] = dest_params[:country].split.map(&:capitalize).join(" ")
     @destination = Destination.new(dest_params)
 
     if @destination.save
@@ -34,6 +34,7 @@ class Travelution < Sinatra::Base
 
   #search
   post '/destinations/search' do
+    puts params[:query]
     @destinations = Destination.search(params[:query])
     erb(:"destinations/index")
   end

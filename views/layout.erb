@@ -3,73 +3,60 @@
 <head>
   <title>Travelution</title>
   
-  <!-- Adds link to CSS files -->
-  <link rel="stylesheet" type="text/css" href="/css/reset.css">
+  <!-- Adds link to CSS files: style.css & Materialize -->
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   
-  <!-- Adds link to Bootstrap libraries -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
-  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-
-  <!-- Adds google maps api key and javascript file-->
-  <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtXJfLXl7SdP0XMEpkNhIU-WaYcQUs108"></script> -->
+  <!-- Adds link to Materialize and JQuery libraries, the Google Maps API and the script.js file -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHLett8djBo62dDXj0EjCimF8Rd6E8cxg&libraries=places"></script>
   <script type="text/javascript" src="/scripts/script.js"></script>
 
 </head>
 <body>
-  <!-- <header>
+
     <nav>
-      <ul>
-        <li><a href="/">Tun.r</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/artists">Artists</a></li>
-        <li><a href="/artists/new">Add Artist</a></li>
+    <div class="nav-wrapper light-blue darken-1">
+      <a href="/" class="brand-logo">Travelution</a>
+      <a href="/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/about" style="font-size: 20px">About</a></li>
+        <li><a href="/destinations" style="font-size: 20px">Destinations</a></li>
+        <li><a href="/log_in" style="font-size: 20px">Log In</a></li>
       </ul>
-    </nav>
-  </header> -->
-
-  <!--  Example of current nav bar -->
-  <!-- <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">  
-      <div class="nav navbar-nav">
-        <ul>
-          <li><a href="/about">About</a></li>
-          <li><a href="/destinations">Destinations</a></li>
-          <li><a href="/log_in">Log In</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav> -->
-
-
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">        
-        <a class="navbar-brand" href="/">Travelution</a>
-        <!-- <h5 style="color: white">The evolution of traveling</h5> -->
-      </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <form action="/destinations/search" method="POST" class="navbar-form navbar-right" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control" name="query" placeholder="Search by name">
-          </div>
-          <button type="submit" class="btn btn-default">Search</button>
-        </form>
-      </div>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="side-nav" id="mobile-demo">
         <li><a href="/about">About</a></li>
         <li><a href="/destinations">Destinations</a></li>
-        <li><a href="/log_in">LogIn</a></li>
+        <li><a href="/log_in">Log In</a></li>
       </ul>
-    </div><!-- /.container-fluid -->
+    </div>
   </nav>
+  <div class="row" id="background">
+    <div class="col s3 offset-s7"> 
+      <form action="/destinations/search" method="POST">
+        <div class="row">
+          <div class="col s4 offset-s7 input-field">  
+            <input type="text" name="search" class="validate" placeholder="Name of Country">
+            <!-- <label for="destination[interesting_fact]">Interesting Fact/Activity</label> -->
+          </div>
+          <div class="col s2">
+            <button class="btn waves-effect waves-light" type="submit" name="action"><i class="material-icons right">search</i></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 
 
-  <img src="http://i.imgur.com/b1p86CP.jpg" id="background-photo">
+
+
+
+
+
   <main>
-    <div class="container-fluid">
+    <div class="container">
       <%= yield %>
     </div>
   </main>
