@@ -23,6 +23,7 @@ function initialize(destination) {
 var destName;
 var destCountry;
 var destAddress;
+var destPhoto_url;
 
 function initAutocomplete() {
   var map = new google.maps.Map(document.getElementById('mapNewDest'), {
@@ -46,19 +47,8 @@ function initAutocomplete() {
   // more details for that place.
   searchBox.addListener('places_changed', function() {
     var places = searchBox.getPlaces();
-    console.log(places) 
-    destName = places[0].name;
-    destCountry = places[0].address_components[places[0].address_components.length - 1].long_name;
-    destLocation = places[0].formatted_address;
-
-    document.getElementById('destName').setAttribute("value", destName);
-    document.getElementById('destCountry').setAttribute("value", destCountry);
-    document.getElementById('destLocation').setAttribute("value", destLocation);
-
-    console.log(places[0].id);
-    console.log(places[0].place_id);  
-    console.log(places[0]);
-    console.log(places[0].geometry.location);
+    fillForm(places);
+    
     if (places.length == 0) {
       return;
     }
@@ -97,4 +87,20 @@ function initAutocomplete() {
     });
     map.fitBounds(bounds);
   });
+}
+
+
+function fillForm (places) {
+  destName = places[0].name;
+  destCountry = places[0].address_components[places[0].address_components.length - 1].long_name;
+  destLocation = places[0].formatted_address;
+  document.getElementById('destName').setAttribute("value", destName);
+  document.getElementById('destCountry').setAttribute("value", destCountry);
+  document.getElementById('destLocation').setAttribute("value", destLocation);
+
+  if(places[0].photos) {
+    destPhoto_url = places[0].photos[0].getUrl({'maxWidth': 600, 'maxHeight': 400});
+    document.getElementById('destPhoto').setAttribute("value", destPhoto_url);
+  }
+
 }

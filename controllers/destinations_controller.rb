@@ -15,7 +15,10 @@ class Travelution < Sinatra::Base
 
   # create
   post '/destinations' do
-    @destination = Destination.new(params[:destination])
+    dest_params = params[:destination]
+    dest_params[:name] = dest_params[:name].split.map(&:capitalize).join(" ")
+    @destination = Destination.new(dest_params)
+
     if @destination.save
       redirect("/destinations/#{@destination.id}")
     else
@@ -27,6 +30,12 @@ class Travelution < Sinatra::Base
   get '/destinations/:id' do
     @destination = Destination.find(params[:id])
     erb(:"destinations/show")
+  end
+
+  #search
+  get '/destinations/search' do
+    @destinations = Destination.search(params[:query])
+    erb(:"/destinations/search")
   end
 
   # edit
