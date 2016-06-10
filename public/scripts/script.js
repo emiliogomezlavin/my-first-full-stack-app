@@ -2,6 +2,7 @@ console.log("linked!!!!");
 
 $( document ).ready(function(){
    $(".button-collapse").sideNav();
+   $('select').material_select();
 })
 
 var map;

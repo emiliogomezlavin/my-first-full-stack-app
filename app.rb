@@ -13,4 +13,8 @@ class Travelution < Sinatra::Base
   	erb :log_in
   end
 
+  get '/random' do
+    erb :random
+  end
+
 end

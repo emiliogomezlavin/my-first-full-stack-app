@@ -8,8 +8,16 @@
 	margin-top: -20px;
 }
 
+#searchBox {
+  margin-top: 7px !important;
+}
+
 ul {
 	list-style-type: none;
+}
+
+#underConst {
+  color: black;
 }
 
 #showImg {

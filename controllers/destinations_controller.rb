@@ -1,10 +1,22 @@
 class Travelution < Sinatra::Base
 
   
-  # index
+  # index by newest on top
   get '/destinations' do
-    @destinations = Destination.all
+    @destinations = Destination.all.order(id: :desc)
     erb(:"destinations/index")
+  end
+
+  # index by newest on top
+  get "/destinations" do
+    @destinations = Destination.all.order(name: :asc)
+    erb (:"destinations/index")
+  end
+
+  # index by newest on top
+  get "/destinations" do
+    @destinations = Destination.all.order(country: :asc)
+    erb (:"destinations/index")
   end
 
   # new
