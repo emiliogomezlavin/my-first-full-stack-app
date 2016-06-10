@@ -1,7 +1,7 @@
 class Destination < ActiveRecord::Base
 	
 	def self.search(query)
-  		where("name LIKE ?", "%#{query.capitalize}%") 
+  		return Destination.where(country: query) 
 	end
 
 	extend Geocoder::Model::ActiveRecord

@@ -33,9 +33,9 @@ class Travelution < Sinatra::Base
   end
 
   #search
-  get '/destinations/search' do
+  post '/destinations/search' do
     @destinations = Destination.search(params[:query])
-    erb(:"/destinations/search")
+    erb(:"destinations/index")
   end
 
   # edit
