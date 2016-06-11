@@ -24,15 +24,15 @@ Let me introduce the project!
 -  gem "sinatra-activerecord" ==>  used to manipulate the SQL database via postgreSQL
 -  gem "rake"==> used to populate the migrations and schema creations for the Models
 -  gem "pg" ==>  PostgreSQL used as the SQL framework
--  gem "tux" ==>  Environment to test database management 
+-  gem "tux" ==>  Environment to test and managa the database
 -  gem "geocoder"  ==> fetching latitude and longitude from address
 
 </br>
 **MVC** system for a leaner and more efficient code
 
-**CRUD operation** for convention routes
+**CRUD operation** for conventional routes
 
-**Javascript** was used to provide all the functionality of the game
+**Javascript** was used to provide all the functionality
 
 **Google Maps API** was used to provide the maps and the information about the destinations
 
@@ -66,22 +66,28 @@ Let me introduce the project!
 7. User can use either type manually the information or use the search box of the map and the search will return and autofill the information
 8. After inputing all information, users submits and gets redirected to a page with the new created destination
 
+</br>More details on the user stories can be found [here](https://moqups.com/emiliogomezlavin/tDs3XA65)
+
 </br>
 
 **Planning**
 
-The Web App was planned based on *******!!!!!
+The Web App was planned based on the need of wanting to save destinations or cool places you have visited plus sharing other interesting ones so the community can be inspired to travel more. From this idea, the planning begin on defining what data would be shown and how the model and table would need to be created. Then how it would be displayed and how many views would be required in order to show the different elements of the basic functionality. 
 
 From that the wireframes were designed to provide a clear path on which elements would need to be created to ensure the functionality would run smoothly:
 
-****!!!!!!
-![Markdown preferences pane](image)
-Home
+Views:
+
+- [Home, New Destination, DestinationId and All Destinations]("https://www.moqups.com/#!/edit/emiliogomezlavin/tDs3XA65")
+
 
 </br>
-Then working through the user stories, I created piece by piece the required functions and objects and data management that would bring to life the usability of the app using dummy data. Once the routes and the server was working with the seed data the next step was to re-factor the code to use Google Maps API to make it a dynamic search to allow the user to add new destinations in a more reliable and simple way.
+Then working through the user stories, I created piece by piece the required functions and objects and data management that would bring to life the usability of the app using seed data. Once the routes and the server were working with the seed data the next step was to re-factor the code to use Google Maps API to make it a dynamic search to allow the user to add new destinations in a more reliable and simple way.
 
-Finally, providing an exciting and engaging look & feel to provide a better user experience. The game was uploaded to Heroku as required in the project specifications. To be redirected to the web app click  [here](http://cleaner-crab-53004.bitballoon.com/).
+Finally, providing an exciting and engaging look & feel to provide a better user experience. The site was uploaded to Heroku as required in the project specifications. 
+
+Now you're ready to discover what Travelution is all about 
+[here](https://boiling-retreat-41852.herokuapp.com/).
 
 </br>
 
@@ -94,9 +100,9 @@ Finally, providing an exciting and engaging look & feel to provide a better user
 
 ### Shout out
  
--  Shout out to Alex for all his help ****!!!!
--  Michael maps management
--  Anabelle help
--  Wayne geocode
--  Ben materialize
--  Jen search functionality
+-  To Alex and all the consultants for all their help to find the solution to the multiple obstacles I faced during the development of this project
+-  To Michael Norelli, the maps master, for all his wisdom on how to get the most out of Google Maps API
+-  To Anabelle for always helping me with the difficult parts of my projects
+-  To Wayne for introducing me to Geocoder
+-  To Ben Yang for introducing me to the beautiful world of the Materialize Library
+-  To Jen for sharing all her work on the search functionality
