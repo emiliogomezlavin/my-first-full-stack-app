@@ -78,7 +78,7 @@ From that the wireframes were designed to provide a clear path on which elements
 
 Views:
 
-- [Home, New Destination, DestinationId and All Destinations]("https://www.moqups.com/#!/edit/emiliogomezlavin/tDs3XA65")
+[Home, New Destination, DestinationId and All Destinations](https://moqups.com/emiliogomezlavin/tDs3XA65/)
 
 
 </br>
