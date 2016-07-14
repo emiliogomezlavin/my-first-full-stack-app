@@ -16,6 +16,27 @@
 
 </head>
 <body>
+    
+    //facebook layouts
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1745071782376881',
+          xfbml      : true,
+          version    : 'v2.7'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
 
     <nav>
     <div class="nav-wrapper light-blue darken-1">
@@ -36,16 +57,10 @@
     </div>
   </nav>
   <div class="row input-field">
-    <div class="col s3" style="margin-top: -15px">
-      <div class="input-field col s12">
-        <select>
-          <option value="" disabled selected>Order by:</option>
-          <option value="1">Name</option>
-          <option value="2">Country</option>
-        </select>
-      </div>
+    <div class="col s9">
+      
     </div>
-    <div class="col s3 offset-s6">
+    <div class="col s3">
       <form action="/destinations/search" method="POST" role="search"> 
         <div class="col s9"> 
           <input type="text" name="query" class="validate" placeholder="Name of Country">
@@ -59,7 +74,12 @@
 
 
 
-
+  <div
+    class="fb-like"
+    data-share="true"
+    data-width="450"
+    data-show-faces="true">
+  </div>
 
 
 
