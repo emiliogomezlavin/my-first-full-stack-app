@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
   
   <!-- Adds link to Materialize and JQuery libraries, the Google Maps API and the script.js file -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -17,79 +18,33 @@
 </head>
 <body>
     
-    //facebook layouts
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '1745071782376881',
-          xfbml      : true,
-          version    : 'v2.7'
-        });
-      };
-
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-    </script>
-
-
-
     <nav>
     <div class="nav-wrapper light-blue darken-1">
       <a href="/" class="brand-logo">Travelution</a>
       <a href="/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="/random" style="font-size: 20px">iRandom</a></li>
-        <li><a href="/about" style="font-size: 20px">About</a></li>
         <li><a href="/destinations" style="font-size: 20px">Destinations</a></li>
-        <li><a href="/log_in" style="font-size: 20px">Log In</a></li>
+        <li><a href="/about" style="font-size: 20px">About</a></li>
+        <!-- <li><a href="/log_in" style="font-size: 20px">Log In</a></li> -->
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="/random">iRandom</a></li>
-        <li><a href="/about">About</a></li>
         <li><a href="/destinations">Destinations</a></li>
-        <li><a href="/log_in">Log In</a></li>
+        <li><a href="/about">About</a></li>
+        <!-- <li><a href="/log_in">Log In</a></li> -->
       </ul>
     </div>
   </nav>
-  <div class="row input-field">
-    <div class="col s9">
-      
-    </div>
-    <div class="col s3">
-      <form action="/destinations/search" method="POST" role="search"> 
-        <div class="col s9"> 
-          <input type="text" name="query" class="validate" placeholder="Name of Country">
-        </div>
-        <div class="col s3">
-          <button class="btn waves-effect waves-light red darken-4 center-align" type="submit"><i class="material-icons right">search</i></button>
-        </div>
-      </form>
-    </div>
+
+  <div class="container">
+    <%= yield %>
   </div>
-
-
-
-  <div
-    class="fb-like"
-    data-share="true"
-    data-width="450"
-    data-show-faces="true">
-  </div>
-
-
-
-  <main>
-    <div class="container">
-      <%= yield %>
+  <footer class="center-align">
+    <div class="row">
+        &copy; Travelution 2016   
+        <a href="https://github.com/emiliogomezlavin/my-first-full-stack-app"><p>Github Repository</p></a>  
+      </div>
     </div>
-  </main>
-  <!-- <footer>
-    &copy; Tun.r
-  </footer> -->
+    
+  </footer>
 </body>
 </html>

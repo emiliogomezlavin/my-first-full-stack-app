@@ -1,52 +1,81 @@
-<div class="row">
-  <div class="col s12 center-align">
-    <h1><%= @destination.name %></h1>
+<div class="container-site"> 
+  <!-- Row containing the search form -->
+  <div class="row input-field" style="margin-top: 40px !important">
+    <div class="col offset-l8 l4 s12">
+      <div class="row">
+        <form action="/destinations/search" method="POST" role="search"> 
+          <div class="col l8 s6">
+            <input type="text" name="query" class="validate search-form" placeholder="Name of Country">
+          </div>
+          <div class="col l4 s6">
+            <button class="btn waves-effect waves-light red darken-4 center-align search-form" type="submit"><i class="material-icons right">search</i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col s12 center-align">
+      <h1><%= @destination.name %></h1>
+    </div>
+  </div>
+  <div class="divider" style="margin-bottom: 65px"></div>
+
+  <div class="row imgTag">
+    <div class="col l6 s12 center-align">  
+        <h6 class="show-title">PHOTO</h6>
+        <img id="showImg" src="<%= @destination.photo_url %>" alt="<%= @destination.name %> photo">
+    </div>
+    <div class="col l6 s12 center-align">  
+        <h6 class="show-title">STREET VIEW</h6>
+        <div id="street-view"></div>
+    </div>
+  </div>
+
+  <div class="row center-align" style="margin-top: 50px;">
+    <h4 class="collectionTitle">Interesting Fact </h4>
+    <h5><%= @destination.interesting_fact %></h5>
+  </div>
+
+  <div class="row">
+    <table class="bordered highlight">
+      <div class="col l4 s6">
+        <thead>
+          <tr>
+            <th data-field="Title"></th>
+            <th data-field="Data"></th>
+          </tr>
+        </thead>
+      </div>
+      <div class="col l8 s6">
+        <tbody>
+          <tr>
+            <td class="collectionTitle">Country </td>
+            <td class="collectionData"><%= @destination.country %></td>
+          </tr>
+          <tr>
+            <td class="collectionTitle">Location </td>
+            <td class="collectionData"><%= @destination.location %></td>
+          </tr>
+          <tr>
+            <td class="collectionTitle">Latitude </td>
+            <td class="collectionData"><%= @destination.latitude %></td>
+          </tr>
+          <tr>
+            <td class="collectionTitle">Longitude </td>
+            <td class="collectionData"><%= @destination.longitude %></td>
+          </tr>
+          <tr>
+            <td class="collectionTitle">Photo URL </td>
+            <td class="collectionData"><a href="<%= @destination.photo_url %>"><%= @destination.photo_url %></a></td>
+          </tr>
+        </tbody>
+      </div>
+    </table>
   </div>
 </div>
-<div class="divider" style="margin-bottom: 65px"></div>
-
-<div class="row imgTag">
-  <div class="col s6 center-align">  
-      <h6>Photo</h6>
-  </div>
-  <div class="col s6 center-align">  
-      <h6>Street View</h6>
-  </div>
-</div>
-
-
-<div class="row"> 
-  <div class="col s6">
-    <img id="showImg" src="<%= @destination.photo_url %>" alt="<%= @destination.name %> photo">
-  </div>
-  <div class="col s6">
-    <div id="street-view"></div>
-  </div>
-</div>  
-<div class="row">
-  <div class="col s3">
-    <ul class="collection">
-      <li class="collection-item collec"><b>Country: </b></li>
-      <li class="collection-item collec"><b>Interesting Fact: </b></li>
-      <li class="collection-item collec"><b>Location: </b></li>
-      <li class="collection-item collec"><b>Latitude: </b></li>
-      <li class="collection-item collec"><b>Longitude: </b></li>
-      <li class="collection-item collec"><b>Photo URL: </b></li>
-    </ul>
-  </div>
-  <div class="col s9">
-    <ul class="collection">
-      <li class="collection-item collecData"><%= @destination.country %></li>
-      <li class="collection-item collecData"><%= @destination.interesting_fact %></li>
-      <li class="collection-item collecData"><%= @destination.location %></li>
-      <li class="collection-item collecData"><%= @destination.latitude %></li>
-      <li class="collection-item collecData"><%= @destination.longitude %></li>
-      <li class="collection-item collecData"><a href="<%= @destination.photo_url %>"><%= @destination.photo_url %></a></li>
-    </ul>
-  </div>
-</div>
-
- 
 
 <script type="text/javascript">
   var data = <%= @destination.to_json %>

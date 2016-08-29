@@ -3,6 +3,7 @@ console.log("linked!!!!");
 $( document ).ready(function(){
    $(".button-collapse").sideNav();
    $('select').material_select();
+   $('.slider').slider({full_width: true});
 })
 
 var map;

@@ -1,53 +1,55 @@
-<div class="row">
-  <div class="col s12 center-align">
-    <h1>New Destination</h1>
+<div class="container-site"> 
+  <div class="row">
+    <div class="col s12 center-align">
+      <h1>New Destination</h1>
+    </div>
   </div>
-</div>
-<div class="divider" style="margin-bottom: 65px"></div>
-<div class="row">
-  <div class="col s5">
-    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-    <div id="mapNewDest"></div>
-  </div>
-  <div class="col s7">
-    <form action="/destinations" method="post">
-      <div class="row">
-        <div class="col s12 input-field">  
-          <input id="destName" type="text" name="destination[name]" class="validate" placeholder="Mexico City">
-          <label for="destination[name]">Name</label>
+  <div class="divider" style="margin-bottom: 65px"></div>
+  <div class="row">
+    <div class="col l5 s12">
+      <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+      <div id="mapNewDest"></div>
+    </div>
+    <div class="col l7 s12">
+      <form action="/destinations" method="post">
+        <div class="row">
+          <div class="col s12 input-field">  
+            <input id="destName" type="text" name="destination[name]" class="validate" placeholder="Mexico City">
+            <label for="destination[name]">Name</label>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col s12 input-field">  
-          <input id="destCountry" type="text" name="destination[country]" class="validate" placeholder="Mexico">
-          <label for="destination[country]">Country</label>
+        <div class="row">
+          <div class="col s12 input-field">  
+            <input id="destCountry" type="text" name="destination[country]" class="validate" placeholder="Mexico">
+            <label for="destination[country]">Country</label>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col s12 input-field">  
-          <input id="destLocation" type="text" name="destination[location]" class="validate" placeholder="Address">
-          <label for="destination[location]">Address</label>
+        <div class="row">
+          <div class="col s12 input-field">  
+            <input id="destLocation" type="text" name="destination[location]" class="validate" placeholder="Address">
+            <label for="destination[location]">Address</label>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col s12 input-field">  
-          <input id="destPhoto" type="text" name="destination[photo_url]" class="validate" placeholder="https://">
-          <label for="destination[photo_url]">Photo URL</label>
+        <div class="row">
+          <div class="col s12 input-field">  
+            <input id="destPhoto" type="text" name="destination[photo_url]" class="validate" placeholder="https://">
+            <label for="destination[photo_url]">Photo URL</label>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col s12 input-field">  
-          <input id="destAddress" type="text" name="destination[interesting_fact]" class="validate" placeholder="Best city in the world">
-          <label for="destination[interesting_fact]">Interesting Fact/Activity</label>
+        <div class="row">
+          <div class="col s12 input-field">  
+            <input id="destAddress" type="text" name="destination[interesting_fact]" class="validate" placeholder="Best city in the world">
+            <label for="destination[interesting_fact]">Interesting Fact/Activity</label>
+          </div>
         </div>
-      </div>
-      <!-- <input class="btn btn-danger" type="submit" value="Create"> -->
-      <div class="row">
-        <div class="col s12">
-          <button class="btn waves-effect waves-light red darken-4 center-align" type="submit" name="action"><i class="material-icons right">language</i>Take me there...</button>
+        <!-- <input class="btn btn-danger" type="submit" value="Create"> -->
+        <div class="row">
+          <div class="col s12">
+            <button class="btn waves-effect waves-light red darken-4 center-align" type="submit" name="action"><i class="material-icons right">language</i>Take me there...</button>
+          </div>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
 </div>
 

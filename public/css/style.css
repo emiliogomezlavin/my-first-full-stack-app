@@ -1,9 +1,4 @@
-/*body {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/ab/Night_Panorama_of_Golden_Gate_Bridge.jpg");
-  background-size: cover;
-  width: 100%
-}
-*/
+
 #background-photo {
 	margin-top: -20px;
 }
@@ -14,43 +9,65 @@
 
 ul {
 	list-style-type: none;
+  height: 100% !important;
 }
 
-#underConst {
-  color: black;
+.search-form {
+  display: inline !important;
+}
+
+.show-title{
+  font-size: 30px !important;
+  color: white;
+  text-shadow: 4px 4px 8px #000000;
 }
 
 #showImg {
-	margin: 15px;
 	border: 2px solid gray;
 	border-radius: 5px;
   height: 400px;
   width: 100%;
 }
 
-.imgTag {
-  margin-bottom: -20px;
+.collectionTitle {
+  color: #b71c1c;
+  font-weight: bold;
 }
 
-.collec {
-  color: #b71c1c;
+.collectionData {
+  padding-left: 40px;
+}
+
+.slider {
+  width: 100% !important;
+  height: 800px !important;
+}
+
+.slides {
+  width: 100% !important;
+}
+
+.home-img {
+  height: 800px !important;
 }
 
 h1{
   color: #b71c1c;
-  padding-bottom: 10px;
 }
 
 h2, h5 {
-  color: #37474f;
+  color: white;
 }
 
 h3 {
   font-size: 90px;
 }
 
-#about {
-  height: 350px;
+.about-description {
+  font-size: 20px;
+  text-align: justify;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #login {
@@ -74,7 +91,6 @@ h3 {
 }
 
 #street-view {
-  margin: 15px;
   border: 2px solid gray;
   border-radius: 5px;
   height: 400px;
@@ -118,6 +134,22 @@ h3 {
   font-family: Roboto;
 }
 
+.card-btn {
+  padding: 40px;
+  margin-top: 40px;
+}
+
+.brand-logo {
+  font-family: 'Lobster', cursive;
+  font-size: 40px !important;
+  padding-left: 15px !important;
+}
+
+.index-inter-fact {
+  margin-top: 40px;
+  font-size: 20px;
+}
+
 #type-selector {
   color: #fff;
   background-color: #4d90fe;
@@ -130,6 +162,13 @@ h3 {
   font-weight: 300;
 }
 
+.container {
+  width: 100% !important;
+}
+.container-site {
+  padding-left: 40px;
+  padding-right: 40px;
+}
 #target {
   width: 345px;
 }
