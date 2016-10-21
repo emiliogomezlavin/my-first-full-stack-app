@@ -2,7 +2,8 @@ class Travelution < Sinatra::Base
 
   
   # index by newest on top
-  get '/destinations' do
+  # adds new comment
+  get '/destinations' do   
     @destinations = Destination.all.order(id: :desc)
     erb(:"destinations/index")
   end
