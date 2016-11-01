@@ -1,7 +1,7 @@
 
 #background-photo {
 	margin-top: -20px;
-}
+} 
 
 #searchBox {
   margin-top: 7px !important;
@@ -164,6 +164,7 @@ h3 {
 
 .container {
   width: 100% !important;
+  max-width: 100% !important;
 }
 .container-site {
   padding-left: 40px;
